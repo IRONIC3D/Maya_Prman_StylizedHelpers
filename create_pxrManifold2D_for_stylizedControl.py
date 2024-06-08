@@ -21,6 +21,11 @@ else:
 
         # Check if the shading group has a PxrSurface shading node connected to its 'rman__surface'
         connected_nodes = cmds.listConnections(shading_group + '.rman__surface', type='PxrSurface')
+        
+        # If no connection found, check for 'surfaceShader' connection
+        if not connected_nodes:
+            connected_nodes = cmds.listConnections(shading_group + '.surfaceShader', type='PxrSurface')
+
         if not connected_nodes:
             print('No PxrSurface shading node found')
         else:
