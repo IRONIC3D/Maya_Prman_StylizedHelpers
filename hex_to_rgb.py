@@ -1,3 +1,13 @@
+# This handy little script will allow an artist to select a color using a hex value and apply it to the selected shader.
+# I use this script constantly when I'm copying colors from Adobe Kulor or other color pickers using a hex value.
+# To use this script, select the shading model you want to apply the color to, and run the script. 
+# Paste/enter the hex code, pick the node target from the dropdown menu and execute.
+#
+# The current supported render engines are:
+#   - RenderMan
+#   - 3Delight
+#   - Arnold
+
 import maya.cmds as cmds
 
 applied_color = False
